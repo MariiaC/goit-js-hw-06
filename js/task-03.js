@@ -16,8 +16,7 @@ const images = [
 
 const imagesRef = document.querySelector('.gallery');
 
-const newGalRef = images.map( image => {
-  imagesRef.insertAdjacentHTML('afterbegin',
+const newGalRef = imagesRef.insertAdjacentHTML('afterbegin',
     `<li>
    <img src='https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
     alt='White and Black Long Fur Cat' />
@@ -29,7 +28,7 @@ const newGalRef = images.map( image => {
     alt='Group of Horses Running'/>
     </li>
     `);
-})
+ 
 
 console.log(imagesRef.append(newGalRef));
 
