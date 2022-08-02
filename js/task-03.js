@@ -29,7 +29,6 @@ const newGalRef = imagesRef.insertAdjacentHTML('afterbegin',
     </li>
     `);
  
-
 console.log(imagesRef.append(newGalRef));
 
 /*Напиши скрипт для створення галереї зображень на підставі масиву даних.

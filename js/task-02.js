@@ -18,6 +18,8 @@ const newArrRef = ingredients.map( ingr => {
 
   return newLi
 });
+
+
 console.log(ingredientsRef.append(...newArrRef));
 
 
