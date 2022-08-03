@@ -9,23 +9,22 @@ function formSubmit(event) {
   const formaEvent = event.currentTarget.elements;
   // console.dir(formEl);
 
-  const emailRef = formaEvent.email.value;
-  const passwordRef = formaEvent.password.value;
-  const subscriptionRef = formaEvent.password.value;
+  const email = formaEvent.email.value;
+  const password = formaEvent.password.value;
+  
 
   const formCollection = {
-    emailRef,
-    passwordRef,
-    subscriptionRef,
+    email,
+    password,
   };
    console.log(formCollection);
     
-  formRef.reset();
-  
-   if (emailRef === "" || passwordRef === "") {
+ 
+   if (email === "" || password === "") {
         return alert("Please fill in all the fields!");
-    }
-  
+   }
+   formRef.reset();
+    
   //Варіант з FormData
   // const formData = new FormData(event.currentTarget);
   // console.log(formData);

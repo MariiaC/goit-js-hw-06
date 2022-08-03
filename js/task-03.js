@@ -13,21 +13,11 @@ const images = [
   },
 ];
 
-
 const imagesRef = document.querySelector('.gallery');
+imagesRef.classList.add('new__gallery');
 
-const newGalRef = imagesRef.insertAdjacentHTML('afterbegin',
-    `<li>
-   <img src='https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-    alt='White and Black Long Fur Cat' />
-
-   <img src='https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-    alt='Orange and White Koi Fish Near Yellow Koi Fish'/>
-
-   <img src='https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-    alt='Group of Horses Running'/>
-    </li>
-    `);
- 
-console.log(imagesRef.append(newGalRef));
+const newGallery = ({ url, alt }) => {
+  return `<li class="new__gallery"> <img class="new__gallery" src="${url}" alt="${alt}"/> </li>`;
+}
+ imagesRef.insertAdjacentHTML('afterbegin', images.map(newGallery).join(''));
 
