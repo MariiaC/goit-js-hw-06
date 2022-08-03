@@ -17,12 +17,13 @@ function formSubmit(event) {
     email,
     password,
   };
-   console.log(formCollection);
-    
- 
+       
    if (email === "" || password === "") {
         return alert("Please fill in all the fields!");
    }
+  
+  console.log(formCollection);
+  
    formRef.reset();
     
   //Варіант з FormData

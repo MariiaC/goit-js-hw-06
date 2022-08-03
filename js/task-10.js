@@ -12,10 +12,10 @@ function getAmount() {
   createBoxes(amount);
   console.log(amount);
 }
-
+//НЕПРАВИЛЬНО ДАЛІ
 function createBoxes(amount) {
   const divSize = 30;
-  const fragment = document.createDocumentFragment();
+  const fragment = document.createDocumentFragment();// створити ліч від 0. дів створити. наповнити. 
 
   for (let i = 0; i < amount; i+=1) {
     let size = divSize + i*10;
